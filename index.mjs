@@ -5,7 +5,6 @@ const client = new DynamoDBClient({});
 
 export const handler = async (event) => {
   try {
-    // Parse request body
     const body = JSON.parse(event.body || "{}");
 
     if (!body.title) {
@@ -16,7 +15,7 @@ export const handler = async (event) => {
     }
 
     const item = {
-      id: { S: randomUUID() },       // ✅ matches partition key
+      id: { S: randomUUID() },
       title: { S: body.title },
       done: { BOOL: body.done ?? false },
       createdAt: { S: new Date().toISOString() },
