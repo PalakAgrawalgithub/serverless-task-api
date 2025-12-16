@@ -56,7 +56,25 @@ If you don’t have `package.json`, tell me and I’ll generate it.
 git init
 git add .
 git commit -m "Initial commit - Serverless Task API"
+https://0ho0fxuir6.execute-api.us-east-1.amazonaws.com/prod/TaskApi
 
+---
 
+## 🔹 Example Request (curl)
 
+```bash
+curl -X POST https://0ho0fxuir6.execute-api.us-east-1.amazonaws.com/prod/TaskApi \
+-H "Content-Type: application/json" \
+-d '{"title":"My first task","done":false}'
+
+Example Response
+
+{
+  "message": "Task created",
+  "item": {
+    "id": "some-uuid-here",
+    "title": "My first task",
+    "done": false
+  }
+}
 
