@@ -1,0 +1,9 @@
+{
+  "name": "serverless-task-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Serverless Task API using AWS Lambda, API Gateway, and DynamoDB",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.500.0"
+  }
+}
